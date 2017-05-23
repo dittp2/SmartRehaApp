@@ -1,0 +1,27 @@
+<ion-header>
+
+    <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Daten & Informationen</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  
+<div *ngIf='!authStatus'>
+	<h3>Bitte melden Sie sich mit Ihren Zugangsdaten an.</h3>
+	</div>
+	<div *ngIf='authStatus'>
+		<ion-list>
+    <ion-item *ngFor="let user of usersArray">
+	  <p>Fallnummer: <strong>{{user?.id}}</strong></p>
+	  <p>Kogu-Status: <strong>{{user?.Kogu_Status}}</strong></p>
+      <!--<p>Days Work: <strong>{{user?.daysWork}}</strong></p>-->
+      <!--<p>Hourly Rate: <strong>{{user?.hourlyRate}}</strong></p>-->
+    </ion-item>
+	</ion-list>
+</div>	
+</ion-content>
