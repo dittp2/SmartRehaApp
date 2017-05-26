@@ -1,38 +1,37 @@
 <ion-header>
 
     <ion-navbar>
-    <button ion-button menuToggle *ngIf='authStatus'>
+        <button ion-button menuToggle *ngIf='authStatus'>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Anmeldung</ion-title>
-  </ion-navbar>
+        <ion-title>Anmeldung</ion-title>
+    </ion-navbar>
 
 </ion-header>
 
 <ion-content padding>
 
-<div *ngIf='!authStatus'>
-	<h3>Bitte melden Sie sich mit Ihren Zugangsdaten an.</h3>
-    <form (ngSubmit)="login()">
-        <ion-list>
-            <ion-item>
-                <ion-label stacked>Fallnummer oder Email</ion-label>
-                <ion-input [(ngModel)]="userEmail"
-                           type="email" name="userEmail"></ion-input>
-            </ion-item>
+    <div *ngIf='!authStatus'>
+        <p><b>Guten Tag<br> Bitte geben Sie unten Ihre Fallnummer ein.</b></p>
+        <br>
+        <form (ngSubmit)="login()">
+            <ion-list>
+                <ion-item>
+                    <ion-label stacked>Fallnummer oder Email</ion-label>
+                    <ion-input [(ngModel)]="userEmail" type="email" name="userEmail"></ion-input>
+                </ion-item>
 
-            <ion-item>
-                <ion-label stacked>Passwort</ion-label>
-                <ion-input [(ngModel)]="userPassword"
-                           type="password" name="userPassword"></ion-input>
-            </ion-item>
+                <ion-item>
+                    <ion-label stacked>Passwort</ion-label>
+                    <ion-input [(ngModel)]="userPassword" type="password" name="userPassword"></ion-input>
+                </ion-item>
 
-            <hr/>
-            <button type="submit" ion-button>Anmelden</button>
-        </ion-list>
-    </form>
-	</div>
-	<div *ngIf='authStatus'>
-		<button (click)='logout()' ion-button>Abmelden</button>
-	</div>
+                <hr/>
+                <br><button type="submit" ion-button>Anmelden</button>
+            </ion-list>
+        </form>
+    </div>
+    <div *ngIf='authStatus'>
+        <button (click)='logout()' ion-button>Abmelden</button>
+    </div>
 </ion-content>
