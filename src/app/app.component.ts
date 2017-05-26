@@ -20,7 +20,7 @@ import { DataService } from '../providers/data/data.service';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = HomePage;
+  rootPage: any = SigninPage;
 
   pages: Array<{title: string, component: any}>;
 
