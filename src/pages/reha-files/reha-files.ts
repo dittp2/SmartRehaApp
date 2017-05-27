@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+
+import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 /*
   Generated class for the RehaFiles page.

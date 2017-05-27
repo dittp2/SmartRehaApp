@@ -8,6 +8,8 @@ import { SignupPage } from '../pages/signup/signup';
 import { ShowdataPage } from '../pages/showdata/showdata';
 import { RehaFilesPage } from '../pages/reha-files/reha-files';
 
+import {InAppBrowser} from '@ionic-native/in-app-browser';
+
 import { AuthService } from "./auth.service";
 
 import {DataTableModule} from "angular2-datatable";
@@ -76,6 +78,6 @@ import { Storage } from '@ionic/storage';
 	FileuploadPage,
   RehaFilesPage
   ],
-  providers: [Storage, DataService, UserService, AuthService, AuthGuard, {provide: ErrorHandler, useClass: IonicErrorHandler}]
+  providers: [Storage, DataService, UserService, AuthService, AuthGuard, {provide: ErrorHandler, useClass: IonicErrorHandler}, InAppBrowser]
 })
 export class AppModule {}

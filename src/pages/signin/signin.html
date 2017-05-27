@@ -12,12 +12,13 @@
 <ion-content padding>
 
     <div *ngIf='!authStatus'>
-        <p><b>Guten Tag<br> Bitte geben Sie unten Ihre Fallnummer ein.</b></p>
         <br>
+        <h6>Guten Tag<br> Bitte geben Sie Ihre zugewiesenen Daten ein.</h6>
+        <br><br>
         <form (ngSubmit)="login()">
             <ion-list>
                 <ion-item>
-                    <ion-label stacked>Fallnummer oder Email</ion-label>
+                    <ion-label stacked>Email</ion-label>
                     <ion-input [(ngModel)]="userEmail" type="email" name="userEmail"></ion-input>
                 </ion-item>
 
@@ -27,11 +28,11 @@
                 </ion-item>
 
                 <hr/>
-                <br><button type="submit" ion-button>Anmelden</button>
+                <br><button type="submit" full ion-button>Anmelden</button>
             </ion-list>
         </form>
     </div>
     <div *ngIf='authStatus'>
-        <button (click)='logout()' ion-button>Abmelden</button>
+        <button (click)='logout()' full ion-button>Abmelden</button>
     </div>
 </ion-content>

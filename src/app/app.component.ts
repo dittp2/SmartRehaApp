@@ -22,36 +22,29 @@ export class MyApp {
 
   rootPage: any = SigninPage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string, component: any }>;
 
   constructor(public platform: Platform, private authService: AuthService, data: DataService) {
     this.initializeApp();
-	data.init();
+    data.init();
+
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Startseite', component: HomePage },
-	  { title: 'Anmeldung', component: SigninPage },
-	  // { title: 'Sign-up', component: SignupPage },
-	  { title: 'Daten & Informationen', component: ShowdataPage },
-	  // { title: 'Auth Page', component: AuthPage },
-	  // { title: 'Todo Page', component: TodoPage },
-	  // { title: 'FileUpload Page', component: FileuploadPage },
-    { title: 'Broschüren', component: RehaFilesPage }
+      { title: 'Anmeldung', component: SigninPage },
+      { title: 'Daten & Informationen', component: ShowdataPage },
+      { title: 'Broschüren', component: RehaFilesPage }
     ];
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
       StatusBar.styleDefault();
       Splashscreen.hide();
     });
   }
 
   openPage(page) {
-    // Reset the content nav to have just this page
-    // we wouldn't want the back button to show in this scenario
     this.nav.setRoot(page.component);
   }
 
