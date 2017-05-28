@@ -1,6 +1,6 @@
 <ion-header>
 
-    <ion-navbar>
+  <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
@@ -10,16 +10,16 @@
 </ion-header>
 
 <ion-content padding>
-  
-<div *ngIf='!authStatus'>
-	<h3>Bitte melden Sie sich mit Ihren Zugangsdaten an.</h3>
-	</div>
-	<div *ngIf='authStatus'>
-		<ion-list>
-    <ion-item *ngFor="let user of usersArray">
-	  <p>Fallnummer: <strong>{{user?.id}}</strong></p>
-	  <p>Kogu-Status: <strong>{{user?.Kogu_Status}}</strong></p>
-    </ion-item>
-	</ion-list>
-</div>	
+
+  <div *ngIf='!authStatus'>
+    <h3>Bitte melden Sie sich mit Ihren Zugangsdaten an.</h3>
+  </div>
+  <div *ngIf='authStatus'>
+    <ion-list>
+      <ion-item *ngFor="let user of usersArray">
+        <p>Fallnummer: <strong>{{user?.Fallnummer}}</strong></p>
+        <p>Kogu-Status: <strong>{{user?.Kogu_Status}}</strong></p>
+      </ion-item>
+    </ion-list>
+  </div>
 </ion-content>

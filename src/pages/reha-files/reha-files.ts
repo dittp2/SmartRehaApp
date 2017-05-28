@@ -15,10 +15,23 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 })
 export class RehaFilesPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {}
+  constructor(public navCtrl: NavController, public navParams: NavParams, private iab: InAppBrowser) { }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RehaFilesPage');
   }
 
+  launch(url) {
+
+    let options = [
+      'enableViewportScale=yes',
+      'location=no',
+      'closebuttoncaption=zurück zur App'
+    ];
+
+    const browser = this.iab.create(url, '_blank', options.join());
+    browser.show();
+
+  }
 }
+

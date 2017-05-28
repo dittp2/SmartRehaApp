@@ -32,18 +32,19 @@ export class ShowdataPage implements OnInit {
 
 		this.navCtrl = navCtrl;
 		this.isAuth = new BehaviorSubject(false);
-
+		var userId = firebase.auth().currentUser.uid;
 		this.isAuth.subscribe(val => this.authStatus = val);
 
 		var self = this;
 
-		var ref = this.firestore.ref('/Spitalzentrum Biel SZB/');
+		var ref = this.firestore.ref('/Spitalzentrum Biel SZB/' + userId);
 		ref.once('value').then(function (snapshot) {
 			// We need to create this array first to store our local data
 			let rawList = [];
 			snapshot.forEach(snap => {
 				rawList.push({
 					id: snap.key,
+					Fallnummer: snap.val().Fallnummer,
 					Kogu_Status: snap.val().Kogu_Status
 				});
 			});
@@ -55,3 +56,7 @@ export class ShowdataPage implements OnInit {
 	ngOnInit() {
 	}
 }
+
+// var userId = firebase.auth().currentUser.uid;
+// return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
+//   var username = snapshot.val().username;
