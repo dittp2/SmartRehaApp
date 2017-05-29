@@ -2,6 +2,7 @@ import { Component, NgZone } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { InAppBrowser } from '@ionic-native/in-app-browser';
+import { ShowdataPage } from '../showdata/showdata'
 
 /*
   Generated class for the RehaFiles page.
@@ -15,6 +16,9 @@ import { InAppBrowser } from '@ionic-native/in-app-browser';
 })
 export class RehaFilesPage {
 
+
+
+
   constructor(public navCtrl: NavController, public navParams: NavParams, private iab: InAppBrowser) { }
 
   ionViewDidLoad() {
@@ -22,6 +26,7 @@ export class RehaFilesPage {
   }
 
   launch(url) {
+
 
     let options = [
       'enableViewportScale=yes',

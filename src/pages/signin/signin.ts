@@ -7,6 +7,7 @@ import { UserService } from '../../providers/user/user.service';
 import { ShowdataPage } from '../showdata/showdata';
 
 import { NavController } from 'ionic-angular';
+import { HomePage } from '../home/home';
 
 @Component({
 	selector: 'page-signin',
@@ -43,9 +44,8 @@ export class SigninPage {
 	}
 
 	public login() {
-		this._user.login(this.userEmail, this.userPassword).then(() => {
-			this.nav.setRoot('home');
-		});
+		this._user.login(this.userEmail, this.userPassword)
+		this.nav.setRoot(HomePage);
 	}
 
 	ngOnInit(): any {

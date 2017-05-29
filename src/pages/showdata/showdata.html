@@ -5,21 +5,54 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Daten & Informationen</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="addUser()">
+        <ion-icon name="add"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
 
 <ion-content padding>
-
   <div *ngIf='!authStatus'>
     <h3>Bitte melden Sie sich mit Ihren Zugangsdaten an.</h3>
   </div>
   <div *ngIf='authStatus'>
+    <!--<div ng-show="snapshot != null">-->
     <ion-list>
-      <ion-item *ngFor="let user of usersArray">
-        <p>Fallnummer: <strong>{{user?.Fallnummer}}</strong></p>
+      <!--<ion-item *ngFor="let user of usersArray">-->
+      <ion-item>
+        <!--<p>Fallnummer: <strong>{{user?.Fallnummer}}</strong></p>
         <p>Kogu-Status: <strong>{{user?.Kogu_Status}}</strong></p>
+        <p>Kogu-Status: <strong>{{userDisplayName}}</strong></p>-->
+
+
+        <!--username: ist der Titel bzw. der Name vor dem Inhalt in Firebase! Kann folglich benennt werden wie man möchte.-->
+        <!--<p>username: <strong>{{displayUserName}}</strong></p>
+        <p>name: <strong>{{displayName}}</strong></p>-->
+
+        <p>Fallnummer: <strong>{{displayFallnummer}}</strong></p>
+        <p>Kostengutsprache: <strong>{{displayKostengutsprache}}</strong></p>
+        <p>Broschüren: <strong>{{displayBroschueren1}} {{displayBroschueren3}} {{displayBroschueren2}}</strong></p>
+
+        <!--<p>Broschüre3<strong>{{displayBroschueren3}}</strong></p>-->
+
+        <!--<p>name: <strong>{{user?.name}}</strong></p>-->
+
+        <!--{(userDisplayName)}-->
       </ion-item>
     </ion-list>
+    <!--</div>-->
+
+
+    <!--<form name="form1" action="#" onclick="open()">-->
+ 
+      <div ng-repeat="ar in arr" ng-if="$index%3==0">
+        <span ng-if="$index<arr.length" style="float: left">{{arr[$index]}}</span>
+        <span ng-if="($index+1)<arr.length" style="float: left">{{arr[$index+1]}}</span>
+        <span ng-if="($index+2)<arr.length" style="float: left">{{arr[$index+2]}}</span>
+      </div>
+
   </div>
 </ion-content>

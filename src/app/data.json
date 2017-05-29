@@ -6,7 +6,6 @@
 			"title": "Call John",
 			"description": "Call the Collegue John for Assignment"
 		},
-
 		"uid2": {
 			"email": "admin@yahoo.com",
 			"title": "Call Mona",
@@ -15,27 +14,32 @@
 	},
 	"Spitalzentrum Biel SZB": {
 		"uid1": {
-			"employeeName": "Richard",
-			"daysWork": "15 Days",
-			"hourlyRate": "$11.11"
+			"Fallnummer": "Richard",
+			"Kogu_Status": "15 Days",
+			"Broschüren": {
+				"Broschüre1": "https:www.abc.pdf"
+			}
 		},
-
 		"uid2": {
-			"employeeName": "John",
-			"daysWork": "30 Days",
-			"hourlyRate": "$20.88"
+			"Fallnummer": "John",
+			"Kogu_Status": "30 Days",
+			"Broschüren": {
+				"Broschüre1": "https:www.abcd.pdf"
+			}
 		},
-
 		"uid3": {
-			"employeeName": "Ali",
-			"daysWork": "22 Days",
-			"hourlyRate": "$15.67"
+			"Fallnummer": "Ali",
+			"Kogu_Status": "22 Days",
+			"Broschüren": {
+				"Broschüre1": "https:www.abcde.pdf"
+			}
 		},
-
 		"uid4": {
-			"employeeName": "Raza",
-			"daysWork": "22 Days",
-			"hourlyRate": "$34.28"
+			"Fallnummer": "Raza",
+			"Kogu_Status": "22 Days",
+			"Broschüren": {
+				"Broschüre1": "https:www.abcdef.pdf"
+			}
 		}
 	}
 }
