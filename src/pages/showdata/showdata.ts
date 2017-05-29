@@ -102,47 +102,48 @@ export class ShowdataPage implements OnInit {
 
 		});
 
+
+		var self = this;
+
 		this._user.viewUser(theUserId).then(snapshot => {
-			let arr = [];
-			for (var i = 0, len = arr.length; i < len; i++) {
-				arr.push({
-
-					Klinik1: snapshot.val().displayBroschueren1,
-					Klinik2: snapshot.val().displayBroschueren2,
-					Klinik3: snapshot.val().displayBroschueren3
-
+			let rawList = [];
+			snapshot.forEach(snapshot => {
+				rawList.push({
+					id: snapshot.key,
+					Klinik1: snapshot.val().Klinik1,
+					Klinik2: snapshot.val().Klinik2,
+					Klinik3: snapshot.val().Klinik3
 
 				});
+			});
 
-			}
-
-
+			self.usersArray = rawList;
 		});
-
-		// });
-
-		// });
-
-
-
-		// self.usersArray = rawList;
-		// });
-
-		// open(url) {
-
-		// 			let options = [
-		// 				'enableViewportScale=yes',
-		// 				'location=no',
-		// 				// 'toolbar=yes', 
-		// 				'closebuttoncaption=zurück zur App'
-		// 			];
-		// 			const browser = this.iab.create(url, '_blank', options.join());
-		// 			browser.show();
-
-
-		// 		}
-
 	}
+
+	// });
+
+	// });
+
+
+
+	// self.usersArray = rawList;
+	// });
+
+	// open(url) {
+
+	// 			let options = [
+	// 				'enableViewportScale=yes',
+	// 				'location=no',
+	// 				// 'toolbar=yes', 
+	// 				'closebuttoncaption=zurück zur App'
+	// 			];
+	// 			const browser = this.iab.create(url, '_blank', options.join());
+	// 			browser.show();
+
+
+	// 		}
+
 	ngOnInit() { }
 
 }

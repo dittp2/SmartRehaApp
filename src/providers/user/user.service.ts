@@ -7,10 +7,12 @@ export class UserService {
 
     public auth: any;
     public userProfile: any;
+    public userProfile2: any;
 
     constructor() {
         this.auth = firebase.auth();
         this.userProfile = firebase.database().ref('newDef-SZB');
+        this.userProfile2 = firebase.database().ref('newDef-SZB/userId/Broschüren');
     }
 
     public login(userEmail: string, userPassword: string) {

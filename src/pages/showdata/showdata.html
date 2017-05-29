@@ -21,7 +21,6 @@
   <div *ngIf='authStatus'>
     <!--<div ng-show="snapshot != null">-->
     <ion-list>
-      <!--<ion-item *ngFor="let user of usersArray">-->
       <ion-item>
         <!--<p>Fallnummer: <strong>{{user?.Fallnummer}}</strong></p>
         <p>Kogu-Status: <strong>{{user?.Kogu_Status}}</strong></p>
@@ -42,17 +41,23 @@
 
         <!--{(userDisplayName)}-->
       </ion-item>
+
+      <ion-item *ngFor="let user of usersArray">
+
+
+        <!--<p>displayBroschueren1: <strong>{{user?.displayBroschueren1}}</strong></p>
+        <p>displayBroschueren2: <strong>{{user?.displayBroschueren2}}</strong></p>-->
+
+        <p>Klinik1: <strong>{{user?.Klinik1}}</strong></p>
+        <p>Klinik2: <strong>{{user?.Klinik2}}</strong></p>
+        <p>Klinik3: <strong>{{user?.Klinik3}}</strong></p>
+        <!--{{user?.Markt3}}-->
+      </ion-item>
     </ion-list>
     <!--</div>-->
 
 
-    <!--<form name="form1" action="#" onclick="open()">-->
- 
-      <div ng-repeat="ar in arr" ng-if="$index%3==0">
-        <span ng-if="$index<arr.length" style="float: left">{{arr[$index]}}</span>
-        <span ng-if="($index+1)<arr.length" style="float: left">{{arr[$index+1]}}</span>
-        <span ng-if="($index+2)<arr.length" style="float: left">{{arr[$index+2]}}</span>
-      </div>
+
 
   </div>
 </ion-content>
