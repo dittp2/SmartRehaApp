@@ -4,7 +4,7 @@ import { MyApp } from './app.component';
 
 import { HomePage } from '../pages/home/home';
 import { SigninPage } from '../pages/signin/signin';
-import { SignupPage } from '../pages/signup/signup';
+// import { SignupPage } from '../pages/signup/signup';
 import { ShowdataPage } from '../pages/showdata/showdata';
 import { RehaFilesPage } from '../pages/reha-files/reha-files';
 
@@ -23,11 +23,11 @@ import {
 
 import { AuthGuard } from "./auth.guard";
 
-import { AuthPage } from '../pages/auth/auth';
-import { TodoAddItem } from '../pages/todo-add-item/todo-add-item';
-import { TodoItemInfo } from '../pages/todo-item-info/todo-item-info';
-import { TodoPage } from '../pages/todo/todo';
-import { FileuploadPage } from '../pages/fileupload/fileupload';
+// import { AuthPage } from '../pages/auth/auth';
+// import { TodoAddItem } from '../pages/todo-add-item/todo-add-item';
+// import { TodoItemInfo } from '../pages/todo-item-info/todo-item-info';
+// import { TodoPage } from '../pages/todo/todo';
+// import { FileuploadPage } from '../pages/fileupload/fileupload';
 
 import { DataService } from '../providers/data/data.service';
 import { UserService } from '../providers/user/user.service';
@@ -50,13 +50,13 @@ export const firebaseConfig = {
 		MyApp,
 		HomePage,
 		SigninPage,
-		SignupPage,
+		// SignupPage,
 		ShowdataPage,
-		AuthPage,
-		TodoAddItem,
-		TodoItemInfo,
-		TodoPage,
-		FileuploadPage,
+		// AuthPage,
+		// TodoAddItem,
+		// TodoItemInfo,
+		// TodoPage,
+		// FileuploadPage,
 		RehaFilesPage
 	],
 	imports: [
@@ -85,13 +85,13 @@ export const firebaseConfig = {
 		MyApp,
 		HomePage,
 		SigninPage,
-		SignupPage,
+		// SignupPage,
 		ShowdataPage,
-		AuthPage,
-		TodoAddItem,
-		TodoItemInfo,
-		TodoPage,
-		FileuploadPage,
+		// AuthPage,
+		// TodoAddItem,
+		// TodoItemInfo,
+		// TodoPage,
+		// FileuploadPage,
 		RehaFilesPage
 	],
 	providers: [Storage, DataService, UserService, AuthService, AuthGuard, { provide: ErrorHandler, useClass: IonicErrorHandler }, InAppBrowser]

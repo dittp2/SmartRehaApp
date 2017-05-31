@@ -4,7 +4,7 @@ import { BehaviorSubject } from 'rxjs/Rx';
 import { DataService } from '../../providers/data/data.service';
 import { UserService } from '../../providers/user/user.service';
 
-import { ShowdataPage } from '../showdata/showdata';
+// import { ShowdataPage } from '../showdata/showdata';
 
 import { NavController } from 'ionic-angular';
 import { HomePage } from '../home/home';

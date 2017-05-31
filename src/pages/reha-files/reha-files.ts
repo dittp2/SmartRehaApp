@@ -2,7 +2,7 @@ import { Component, NgZone } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
 
 import { InAppBrowser } from '@ionic-native/in-app-browser';
-import { ShowdataPage } from '../showdata/showdata'
+// import { ShowdataPage } from '../showdata/showdata'
 
 import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { UserService } from '../../providers/user/user.service';
@@ -39,7 +39,7 @@ export class RehaFilesPage {
 
     var self = this;
 
-    var ref = this.firestore.ref('/Spitalzentrum Biel SZB/Broschüren');
+    // var ref = this.firestore.ref('/Spitalzentrum Biel SZB/Broschüren');
     var ref2 = firebase.database().ref('newDef-SZB/' + myUserId + '/Broschüren');
 
     ref2.on("value", function (snapshot) {
