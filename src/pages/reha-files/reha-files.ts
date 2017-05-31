@@ -122,7 +122,8 @@ export class RehaFilesPage {
       'closebuttoncaption=zurück zur App'
     ];
 
-    const browser = this.iab.create(url, '_blank', options.join());
+    // const browser = this.iab.create(url, '_blank', options.join());
+    const browser = this.iab.create(url, '_self', options.join());
     browser.show();
 
   }
