@@ -10,20 +10,11 @@
 </ion-header>
 
 <ion-content padding>
-  <p>Im Folgenden finden Sie die Auflistung der für Sie relevanten Kliniken. <br> <br> Berühren Sie mit Ihrem Finger das blaue Kästchen
-    derjenigen Klinik, die Sie gerne betrachten möchten - die Broschüre öffnet sich im selben Fenster. <br><br>
-    Mit "zurück zur App" gelangen Sie zurück zur Übersicht. 
+  <p>Im Folgenden finden Sie die Auflistung der für Sie relevanten Kliniken. <br> <br> Berühren Sie mit Ihrem Finger das blaue
+    Kästchen derjenigen Klinik, die Sie gerne betrachten möchten - die Broschüre öffnet sich im selben Fenster. <br><br>    Mit "zurück zur App" gelangen Sie zurück zur Übersicht.
   </p>
   <br>
   <ion-list>
-    <!--<ion-item *ngFor="let user of usersArray; let i = index;">-->
-    <!--<ion-item *ngFor="let user of usersArray">
-      <p>Name der Klinik: <strong>{{user.key}}</strong></p>
-      <p>Ihre Adresse: <strong>{{user.childData}}</strong></p>-->
-    <!--<p>{{i[1]}}</p>-->
-    <!--<img [src]=item.URL width="180px" class="padding"/>-->
-    <!--<<button full ion-button="" (click)="launch('https://www.google.com')">Display pdf</button>-->
-    <!--</ion-item>-->
     <button full ion-button="" *ngFor="let user of usersArray" (click)="launch(user.childData)">{{user.key}}</button>
   </ion-list>
 </ion-content>
