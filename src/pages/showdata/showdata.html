@@ -22,14 +22,15 @@
     <!--<div ng-show="snapshot != null">-->
     <ion-list>
 
-      <!--<ion-item *ngFor="let event of events">-->
-      <!--<li>-->
-      <!--<h2>
+      <!--<ion-item *ngFor="let user of usersArray2">-->
+      <ion-item>
+        <!--<li>-->
+        <!--<h2>
             {{event?.Klinik1}}}
           </h2>
           <p>Content: <strong>${{event?.content}}</strong></p>
         </li>-->
-      <ion-item>
+        <!--<ion-item>-->
         <!--<p>Fallnummer: <strong>{{user?.Fallnummer}}</strong></p>
         <p>Kogu-Status: <strong>{{user?.Kogu_Status}}</strong></p>
         <p>Kogu-Status: <strong>{{userDisplayName}}</strong></p>-->
@@ -41,13 +42,22 @@
 
         <p>Fallnummer: <strong>{{displayFallnummer}}</strong></p>
         <p>Kostengutsprache: <strong>{{displayKostengutsprache}}</strong></p>
-        <p>Broschüren: <strong>{{displayBroschueren1}} {{displayBroschueren3}} {{displayBroschueren2}}</strong></p>
+        <!--<p>Broschüren: <strong>{{displayBroschueren1}} {{displayBroschueren3}} {{displayBroschueren2}}</strong></p>-->
 
         <!--<p>Broschüre3<strong>{{displayBroschueren3}}</strong></p>-->
 
         <!--<p>name: <strong>{{user?.name}}</strong></p>-->
 
         <!--{(userDisplayName)}-->
+      </ion-item>
+      <br>
+      <ion-item>
+        <p><b> Auszug der für Sie relevanten Kliniken</b></p>
+      </ion-item>
+      <ion-item *ngFor="let user of usersArray2">
+
+        <p> - {{user.key}}
+          <p>
       </ion-item>
 
 

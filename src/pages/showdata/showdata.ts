@@ -20,6 +20,7 @@ export class ShowdataPage implements OnInit {
 
 	// firestore = firebase.database();
 	public usersArray: any;
+	public usersArray2: any;
 	public authStatus: boolean;
 	public hasDoc: boolean;
 	private isAuth: BehaviorSubject<boolean>;
@@ -59,6 +60,38 @@ export class ShowdataPage implements OnInit {
 		// this.displayUser2(myUserId);
 		this.isAuth.subscribe(val => this.authStatus = val);
 
+
+
+
+
+
+		var self = this;
+
+
+		var ref2 = firebase.database().ref('newDef-SZB/' + myUserId + '/Broschüren');
+
+		ref2.once('value').then(function (childSnapshot) {
+			let rawList = [];
+
+			childSnapshot.forEach(snap => {
+				rawList.push({
+					key: snap.key,
+					childData: snap.val()
+				});
+			});
+			// snapshot.forEach(function (childSnapshot) {
+
+			//   var key = childSnapshot.key;
+			//   var childData = childSnapshot.val();
+
+
+			// rawList.push(key, + ": " + childData);
+
+			// });
+
+			self.usersArray2 = rawList;
+			console.log(rawList);
+		});
 
 	}
 
