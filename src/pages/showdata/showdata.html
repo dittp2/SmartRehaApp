@@ -5,11 +5,6 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title>Daten & Informationen</ion-title>
-    <ion-buttons end>
-      <button ion-button icon-only (click)="addUser()">
-        <ion-icon name="add"></ion-icon>
-      </button>
-    </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -55,7 +50,6 @@
         <p><b> Auszug der für Sie relevanten Kliniken</b></p>
       </ion-item>
       <ion-item *ngFor="let user of usersArray2">
-
         <p> - {{user.key}}
           <p>
       </ion-item>
