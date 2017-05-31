@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Rehabilitations-Kliniken</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <p>Im Folgenden finden Sie die Auflistung der für Sie relevanten Kliniken mit deren Broschüren.</p>
+
+  <!--<button full ion-button="" (click)="launch('https://www.google.com')">Display pdf</button>
+  <button full ion-button="" (click)="launch('https://www.google.com')">Display pdf</button>-->
+  <ion-list>
+    <!--<ion-item *ngFor="let user of usersArray; let i = index;">-->
+    <ion-item *ngFor="let user of usersArray">
+      <p>Name der Klinik: <strong>{{user.key}}</strong></p>
+      <p>Ihre Adresse: <strong>{{user.childData}}</strong></p>
+      <!--<p>{{i[1]}}</p>-->
+      <!--<img [src]=item.URL width="180px" class="padding"/>-->
+      <!--<<button full ion-button="" (click)="launch('https://www.google.com')">Display pdf</button>-->
+    </ion-item>
+    <button full ion-button="" *ngFor="let user of usersArray" (click)="launch(user.childData)">{{user.key}}</button>
+  </ion-list>
+</ion-content>

@@ -21,6 +21,14 @@
   <div *ngIf='authStatus'>
     <!--<div ng-show="snapshot != null">-->
     <ion-list>
+
+      <!--<ion-item *ngFor="let event of events">-->
+      <!--<li>-->
+      <!--<h2>
+            {{event?.Klinik1}}}
+          </h2>
+          <p>Content: <strong>${{event?.content}}</strong></p>
+        </li>-->
       <ion-item>
         <!--<p>Fallnummer: <strong>{{user?.Fallnummer}}</strong></p>
         <p>Kogu-Status: <strong>{{user?.Kogu_Status}}</strong></p>
@@ -42,22 +50,19 @@
         <!--{(userDisplayName)}-->
       </ion-item>
 
-      <ion-item *ngFor="let user of usersArray">
 
 
-        <!--<p>displayBroschueren1: <strong>{{user?.displayBroschueren1}}</strong></p>
+
+      <!--<p>displayBroschueren1: <strong>{{user?.displayBroschueren1}}</strong></p>
         <p>displayBroschueren2: <strong>{{user?.displayBroschueren2}}</strong></p>-->
 
-        <p>Klinik1: <strong>{{user?.Klinik1}}</strong></p>
+      <!--<p>Klinik1: <strong>{{user?.Klinik1}}</strong></p>
         <p>Klinik2: <strong>{{user?.Klinik2}}</strong></p>
-        <p>Klinik3: <strong>{{user?.Klinik3}}</strong></p>
-        <!--{{user?.Markt3}}-->
-      </ion-item>
+        <p>Klinik3: <strong>{{user?.Klinik3}}</strong></p>-->
+      <!--{{user?.Markt3}}-->
+      <!--</ion-item>-->
     </ion-list>
     <!--</div>-->
-
-
-
 
   </div>
 </ion-content>

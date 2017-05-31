@@ -23,17 +23,18 @@ export class ShowdataPage implements OnInit {
 	public authStatus: boolean;
 	public hasDoc: boolean;
 	private isAuth: BehaviorSubject<boolean>;
-	users: FirebaseListObservable<any[]>;
+
 
 	// private userDisplayName: any;
 	// private displayUserName: any;
 	// private displayName: any;
 
-	private displayKostengutsprache: any;
 	private displayFallnummer: any;
+	private displayKostengutsprache: any;
 	private displayBroschueren1: any;
 	private displayBroschueren2: any;
 	private displayBroschueren3: any;
+	private displayBroschueren4: any;
 
 
 
@@ -50,29 +51,63 @@ export class ShowdataPage implements OnInit {
 	constructor(public alertCtrl: AlertController, private iab: InAppBrowser, db: AngularFireDatabase, public navCtrl: NavController,
 		public navParams: NavParams, private _user: UserService, private _cd: ChangeDetectorRef) {
 
+
 		// this.navCtrl = navCtrl;
 		this.isAuth = new BehaviorSubject(false);
 		var myUserId = firebase.auth().currentUser.uid;
 		this.displayUser(myUserId);
+		// this.displayUser2(myUserId);
 		this.isAuth.subscribe(val => this.authStatus = val);
 
-		// var self = this;
 
-		// var ref = this.firestore.ref('/Spitalzentrum Biel SZB/' + userId);
-		// ref.once('value').then(function (snapshot) {
-		// 	// We need to create this array first to store our local data
-		// 	let rawList = [];
-		// 	snapshot.forEach(snap => {
-		// 		rawList.push({
-		// 			id: snap.key,
-		// 			Fallnummer: snap.val().Fallnummer,
-		// 			Kogu_Status: snap.val().Kogu_Status
-		// 		});
-		// 	});
-
-		// 	self.usersArray = rawList;
-		// });
 	}
+
+	// var databaseRef = database.ref("events").orderByChild("date");
+
+	// displayUser2(theUserId) {
+
+	// 	var events = [];
+	// 	this._user.viewUser2(theUserId).then(snapshot => {
+
+
+	// 		var event = snapshot.val();
+
+	// add the event to the UI
+	// var elm = document.createElement('li');
+	// elm.id = 'event-' + snapshot.key;
+	// elm.innerText = event.Klinik1;
+	// document.querySelector('#event-list').appendChild(elm);
+
+	// add the event to our list
+	// events.push({
+	// 	Name: event.Klinik1,
+	// 	Content: event.content
+	// });
+
+	// update/recalculate our avg event duration
+	// calculateAverageEventDuration(events);
+	// 	});
+
+	// }
+
+
+	// var self = this;
+
+	// var ref = this.firestore.ref('/Spitalzentrum Biel SZB/' + userId);
+	// ref.once('value').then(function (snapshot) {
+	// 	// We need to create this array first to store our local data
+	// 	let rawList = [];
+	// 	snapshot.forEach(snap => {
+	// 		rawList.push({
+	// 			id: snap.key,
+	// 			Fallnummer: snap.val().Fallnummer,
+	// 			Kogu_Status: snap.val().Kogu_Status
+	// 		});
+	// 	});
+
+	// 	self.usersArray = rawList;
+	// });
+
 
 	displayUser(theUserId) {
 
@@ -96,30 +131,32 @@ export class ShowdataPage implements OnInit {
 				that.displayFallnummer = snapshot.val().Fallnummer,
 				that.displayKostengutsprache = snapshot.val().Kostengutsprache,
 				that.displayBroschueren1 = snapshot.val().Broschüren.Klinik1,
+				that.displayBroschueren2 = snapshot.val().Broschüren.Klinik2,
 				that.displayBroschueren3 = snapshot.val().Broschüren.Klinik3,
-				that.displayBroschueren2 = snapshot.val().Broschüren.Klinik2
+				that.displayBroschueren4 = snapshot.val().Broschüren.Klinik4
 
 
-		});
-
-
-		var self = this;
-
-		this._user.viewUser(theUserId).then(snapshot => {
-			let rawList = [];
-			snapshot.forEach(snapshot => {
-				rawList.push({
-					id: snapshot.key,
-					Klinik1: snapshot.val().Klinik1,
-					Klinik2: snapshot.val().Klinik2,
-					Klinik3: snapshot.val().Klinik3
-
-				});
-			});
-
-			self.usersArray = rawList;
 		});
 	}
+
+
+	// var self = this;
+
+	// this._user.viewUser(theUserId).then(snapshot => {
+	// 	let rawList = [];
+	// 	snapshot.forEach(snapshot => {
+	// 		rawList.push({
+	// 			id: snapshot.key,
+	// 			Klinik1: snapshot.val().Klinik1,
+	// 			Klinik2: snapshot.val().Klinik2,
+	// 			Klinik3: snapshot.val().Klinik3
+
+	// 		});
+	// 	});
+
+	// 	self.usersArray = rawList;
+	// });
+
 
 	// });
 
