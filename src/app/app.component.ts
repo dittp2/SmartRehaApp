@@ -10,6 +10,7 @@ import { ShowdataPage } from '../pages/showdata/showdata';
 // import { TodoPage } from '../pages/todo/todo';
 // import { FileuploadPage } from '../pages/fileupload/fileupload';
 import { RehaFilesPage } from '../pages/reha-files/reha-files';
+import { ChecklistePagePage } from '../pages/checkliste/checkliste';
 
 import { AuthService } from "./auth.service";
 import { DataService } from '../providers/data/data.service';
@@ -33,7 +34,8 @@ export class MyApp {
       { title: 'Startseite', component: HomePage },
       { title: 'Anmeldung', component: SigninPage },
       { title: 'Daten & Informationen', component: ShowdataPage },
-      { title: 'Broschüren', component: RehaFilesPage }
+      { title: 'Broschüren', component: RehaFilesPage },
+      { title: 'Checkliste', component: ChecklistePagePage }
     ];
   }
 

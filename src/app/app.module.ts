@@ -9,6 +9,7 @@ import { ShowdataPage } from '../pages/showdata/showdata';
 import { RehaFilesPage } from '../pages/reha-files/reha-files';
 
 import { AngularFireModule } from 'angularfire2';
+import { ChecklistePagePage } from '../pages/checkliste/checkliste';
 
 
 import { InAppBrowser } from '@ionic-native/in-app-browser';
@@ -52,6 +53,7 @@ export const firebaseConfig = {
 		SigninPage,
 		// SignupPage,
 		ShowdataPage,
+		ChecklistePagePage,
 		// AuthPage,
 		// TodoAddItem,
 		// TodoItemInfo,
@@ -87,6 +89,7 @@ export const firebaseConfig = {
 		SigninPage,
 		// SignupPage,
 		ShowdataPage,
+		ChecklistePagePage,
 		// AuthPage,
 		// TodoAddItem,
 		// TodoItemInfo,
