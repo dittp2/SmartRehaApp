@@ -14,36 +14,10 @@
     <h3>Bitte melden Sie sich mit Ihren Zugangsdaten an.</h3>
   </div>
   <div *ngIf='authStatus'>
-    <!--<div ng-show="snapshot != null">-->
     <ion-list>
-
-      <!--<ion-item *ngFor="let user of usersArray2">-->
       <ion-item>
-        <!--<li>-->
-        <!--<h2>
-            {{event?.Klinik1}}}
-          </h2>
-          <p>Content: <strong>${{event?.content}}</strong></p>
-        </li>-->
-        <!--<ion-item>-->
-        <!--<p>Fallnummer: <strong>{{user?.Fallnummer}}</strong></p>
-        <p>Kogu-Status: <strong>{{user?.Kogu_Status}}</strong></p>
-        <p>Kogu-Status: <strong>{{userDisplayName}}</strong></p>-->
-
-
-        <!--username: ist der Titel bzw. der Name vor dem Inhalt in Firebase! Kann folglich benennt werden wie man möchte.-->
-        <!--<p>username: <strong>{{displayUserName}}</strong></p>
-        <p>name: <strong>{{displayName}}</strong></p>-->
-
         <p>Fallnummer: <strong>{{displayFallnummer}}</strong></p>
         <p>Kostengutsprache: <strong>{{displayKostengutsprache}}</strong></p>
-        <!--<p>Broschüren: <strong>{{displayBroschueren1}} {{displayBroschueren3}} {{displayBroschueren2}}</strong></p>-->
-
-        <!--<p>Broschüre3<strong>{{displayBroschueren3}}</strong></p>-->
-
-        <!--<p>name: <strong>{{user?.name}}</strong></p>-->
-
-        <!--{(userDisplayName)}-->
       </ion-item>
       <br>
       <ion-item>
@@ -53,20 +27,6 @@
         <p> - {{user.key}}
           <p>
       </ion-item>
-
-
-
-
-      <!--<p>displayBroschueren1: <strong>{{user?.displayBroschueren1}}</strong></p>
-        <p>displayBroschueren2: <strong>{{user?.displayBroschueren2}}</strong></p>-->
-
-      <!--<p>Klinik1: <strong>{{user?.Klinik1}}</strong></p>
-        <p>Klinik2: <strong>{{user?.Klinik2}}</strong></p>
-        <p>Klinik3: <strong>{{user?.Klinik3}}</strong></p>-->
-      <!--{{user?.Markt3}}-->
-      <!--</ion-item>-->
     </ion-list>
-    <!--</div>-->
-
   </div>
 </ion-content>

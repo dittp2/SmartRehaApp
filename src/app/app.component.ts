@@ -4,11 +4,7 @@ import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { HomePage } from '../pages/home/home';
 import { SigninPage } from '../pages/signin/signin';
-// import { SignupPage } from '../pages/signup/signup';
 import { ShowdataPage } from '../pages/showdata/showdata';
-// import { AuthPage } from '../pages/auth/auth';
-// import { TodoPage } from '../pages/todo/todo';
-// import { FileuploadPage } from '../pages/fileupload/fileupload';
 import { RehaFilesPage } from '../pages/reha-files/reha-files';
 import { ChecklistePagePage } from '../pages/checkliste/checkliste';
 
@@ -29,7 +25,6 @@ export class MyApp {
     this.initializeApp();
     data.init();
 
-    // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Startseite', component: HomePage },
       { title: 'Anmeldung', component: SigninPage },
