@@ -13,7 +13,7 @@
 
     <div *ngIf='!authStatus'>
         <br>
-        <h6>Guten Tag<br> Bitte geben Sie Ihre zugewiesenen Daten ein.</h6>
+        <h6>Guten Tag<br> <br> Bitte geben Sie Ihre Email-Adresse ein.</h6>
         <br><br>
         <form (ngSubmit)="login()">
             <ion-list>
@@ -22,10 +22,10 @@
                     <ion-input [(ngModel)]="userEmail" type="email" name="userEmail"></ion-input>
                 </ion-item>
 
-                <ion-item>
+                <!--<ion-item>
                     <ion-label stacked>Passwort</ion-label>
                     <ion-input [(ngModel)]="userPassword" type="password" name="userPassword"></ion-input>
-                </ion-item>
+                </ion-item>-->
 
                 <hr/>
                 <br><button type="submit" full ion-button>Anmelden</button>

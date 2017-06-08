@@ -23,7 +23,7 @@ export class UserService {
 
     public login(userEmail: string, userPassword: string) {
         return new Promise((resolve, reject) => {
-            this.auth.signInWithEmailAndPassword(userEmail, userPassword)
+            this.auth.signInWithEmailAndPassword(userEmail, 'newDef2')
                 .then(userData => resolve(userData),
                 err => reject(err));
         });
