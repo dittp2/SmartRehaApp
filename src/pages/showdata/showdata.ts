@@ -26,10 +26,10 @@ export class ShowdataPage implements OnInit {
 
 	private displayFallnummer: any;
 	private displayKostengutsprache: any;
-	private displayBroschueren1: any;
-	private displayBroschueren2: any;
-	private displayBroschueren3: any;
-	private displayBroschueren4: any;
+	// private displayBroschueren1: any;
+	// private displayBroschueren2: any;
+	// private displayBroschueren3: any;
+	// private displayBroschueren4: any;
 
 	ionViewDidLoad() {
 		console.log('ionViewDidLoad ShowdataPage');
@@ -74,11 +74,11 @@ export class ShowdataPage implements OnInit {
 		this._user.viewUser(theUserId).then(snapshot => {
 			snapshot.key,
 				that.displayFallnummer = snapshot.val().Fallnummer,
-				that.displayKostengutsprache = snapshot.val().Kostengutsprache,
-				that.displayBroschueren1 = snapshot.val().Broschüren.Klinik1,
-				that.displayBroschueren2 = snapshot.val().Broschüren.Klinik2,
-				that.displayBroschueren3 = snapshot.val().Broschüren.Klinik3,
-				that.displayBroschueren4 = snapshot.val().Broschüren.Klinik4
+				that.displayKostengutsprache = snapshot.val().Kostengutsprache
+			// that.displayBroschueren1 = snapshot.val().Broschüren.Klinik1,
+			// that.displayBroschueren2 = snapshot.val().Broschüren.Klinik2,
+			// that.displayBroschueren3 = snapshot.val().Broschüren.Klinik3,
+			// that.displayBroschueren4 = snapshot.val().Broschüren.Klinik4
 		});
 	}
 

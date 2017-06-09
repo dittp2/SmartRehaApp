@@ -26,12 +26,12 @@ export class DataService {
     this.staticData = firebase.database().ref('/static');
   }
 
-  getData() {
-    return this.storage.get('todos');
-  }
+  // getData() {
+  //   return this.storage.get('todos');
+  // }
 
-  save(data) {
-    let newData = JSON.stringify(data);
-    this.storage.set('todos', newData);
-  }
+  // save(data) {
+  //   let newData = JSON.stringify(data);
+  //   this.storage.set('todos', newData);
+  // }
 }
