@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
                BuildableName = "V2 Test.app"
-               BlueprintName = "V2 Test"
-               ReferencedContainer = "container:V2 Test.xcodeproj">
+               BlueprintName = "SmartRehaApp"
+               ReferencedContainer = "container:SmartRehaApp.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "V2 Test.app"
-            BlueprintName = "V2 Test"
-            ReferencedContainer = "container:V2 Test.xcodeproj">
+            BlueprintName = "SmartRehaApp"
+            ReferencedContainer = "container:SmartRehaApp.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -57,8 +57,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "V2 Test.app"
-            BlueprintName = "V2 Test"
-            ReferencedContainer = "container:V2 Test.xcodeproj">
+            BlueprintName = "SmartRehaApp"
+            ReferencedContainer = "container:SmartRehaApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -76,8 +76,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "1D6058900D05DD3D006BFB54"
             BuildableName = "V2 Test.app"
-            BlueprintName = "V2 Test"
-            ReferencedContainer = "container:V2 Test.xcodeproj">
+            BlueprintName = "SmartRehaApp"
+            ReferencedContainer = "container:SmartRehaApp.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
