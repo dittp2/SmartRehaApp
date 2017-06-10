@@ -10,16 +10,13 @@ import { RehaFilesPage } from '../pages/reha-files/reha-files';
 import { AngularFireModule } from 'angularfire2';
 import { ChecklistePagePage } from '../pages/checkliste/checkliste';
 
-
 import { InAppBrowser } from '@ionic-native/in-app-browser';
 
 import { AuthService } from "./auth.service";
 
 import { DataTableModule } from "angular2-datatable";
 
-import {
-	ReactiveFormsModule
-} from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
 
 import { AuthGuard } from "./auth.guard";
 

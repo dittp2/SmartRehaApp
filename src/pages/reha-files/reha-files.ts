@@ -1,9 +1,6 @@
 import { Component } from '@angular/core';
-import { NavController, NavParams } from 'ionic-angular';
 
 import { InAppBrowser } from '@ionic-native/in-app-browser';
-
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
 import { UserService } from '../../providers/user/user.service';
 
 import firebase from 'firebase';
@@ -14,49 +11,41 @@ import firebase from 'firebase';
 })
 export class RehaFilesPage {
 
-  users: FirebaseListObservable<any[]>;
-
-  firestore = firebase.database();
   public usersArray: any;
-  public usersArray2: any;
 
-  constructor(private _user: UserService, db: AngularFireDatabase, public navCtrl: NavController, public navParams: NavParams, private iab: InAppBrowser) {
-    var myUserId = firebase.auth().currentUser.uid;
+  constructor(private _user: UserService, private iab: InAppBrowser) {
 
+    var myUserId = firebase.auth().currentUser.uid; // Authentifizierung
     var self = this;
+    var ref = firebase.database().ref('newDef-SZB/' + myUserId + '/Broschüren'); // Pfad zu den Broschüren
 
-    var ref2 = firebase.database().ref('newDef-SZB/' + myUserId + '/Broschüren');
-
-    ref2.on("value", function (snapshot) {
+    ref.on("value", function (snapshot) {
       console.log(snapshot.val());
     }, function (error) {
       console.log("Error: " + error.code);
     });
 
-    ref2.once('value').then(function (childSnapshot) {
+    // snapshot der Broschüren (Name der Klinik, pdf-Adresse)
+    ref.once('value').then(function (childSnapshot) {
       let rawList = [];
-
       childSnapshot.forEach(snap => {
         rawList.push({
-          key: snap.key,
-          childData: snap.val()
+          key: snap.key, // key = Name der Klinik
+          childData: snap.val() // childData val = pdf-Adresse der Klinik
         });
       });
-
       self.usersArray = rawList;
       console.log(rawList);
     });
-
   }
 
+  // console.log
   ionViewDidLoad() {
     console.log('ionViewDidLoad RehaFilesPage');
   }
 
-
-
+  // InAppBrowser
   launch(url) {
-
 
     let options = [
       'enableViewportScale=yes',
@@ -66,6 +55,5 @@ export class RehaFilesPage {
 
     const browser = this.iab.create(url, '_blank', options.join());
     browser.show();
-
   }
 }
