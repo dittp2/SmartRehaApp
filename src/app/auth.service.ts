@@ -14,12 +14,12 @@ export class AuthService {
 
   }
 
-  signupUser(user: User) {
-    firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
-      .catch(function (error) {
-        console.log(error);
-      });
-  }
+  // signupUser(user: User) {
+  //   firebase.auth().createUserWithEmailAndPassword(user.email, user.password)
+  //     .catch(function (error) {
+  //       console.log(error);
+  //     });
+  // }
 
   signinUser(user: User) {
     firebase.auth().signInWithEmailAndPassword(user.email, user.password)
