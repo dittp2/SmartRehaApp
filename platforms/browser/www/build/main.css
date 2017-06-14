@@ -22214,3 +22214,23 @@ sub {
     padding-top: calc(16px + 20px);
   }
 }
+
+page-checkliste {
+  font-size: 22px;
+}
+
+page-home {
+  font-size: 22px;
+}
+
+page-reha-files {
+  font-size: 22px;
+}
+
+page-showdata {
+  font-size: 22px;
+}
+
+page-signin {
+  font-size: 22px;
+}

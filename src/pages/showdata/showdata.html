@@ -14,19 +14,19 @@
     <h3>Bitte melden Sie sich mit Ihren Zugangsdaten an.</h3>
   </div>
   <div *ngIf='authStatus'>
-    <ion-list>
+    <!--<ion-list>-->
       <ion-item>
-        <p>Fallnummer: <strong>{{displayFallnummer}}</strong></p>
-        <p>Kostengutsprache: <strong>{{displayKostengutsprache}}</strong></p>
+        Fallnummer: <strong>{{displayFallnummer}}</strong> <br>
+        Kostengutsprache: <strong>{{displayKostengutsprache}}</strong>
       </ion-item>
       <br>
       <ion-item>
-        <p><b> Auszug der für Sie relevanten Kliniken</b></p>
+        <b> Auszug der für Sie relevanten Kliniken</b>
       </ion-item>
       <ion-item *ngFor="let user of usersArray">
-        <p> - {{user.key}}
-          <p>
+         - {{user.key}}
+          
       </ion-item>
-    </ion-list>
+    <!--</ion-list>-->
   </div>
 </ion-content>
